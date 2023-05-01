@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.heart {
+    width: 400px;
+    display: inline-block;
+    -webkit-mask: radial-gradient(circle at 60% 65%, red 64%, transparent 65%) top left, radial-gradient(circle at 40% 65%, red 64%, transparent 65%) top right, linear-gradient(to bottom left, red 43%, transparent 43%) bottom left, linear-gradient(to bottom right, red 43%, transparent 43%) bottom right;
+    -webkit-mask-size: 50% 50%;
+    -webkit-mask-repeat: no-repeat;
+    background: linear-gradient(red, blue);
+    position: relative;
+  }
+  
+.heart-text {
+    position: absolute;
+    top: 50%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+  }
+  
+.heart-text img {
+    width: 100%;
+    height: 60px;
+  }
+  
+.heart::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+  
